@@ -2,10 +2,10 @@ import React from 'react'
 import "./styles.css";
 import Button from 'react-bootstrap/Button';
 
-const Button = () => {
+const ButtonComp = ({ description }) => {
     return (
-        <Button variant="primary">Primary</Button>
+        <Button variant="primary">{description}</Button>
     )
 }
 
-export default Button;
+export default ButtonComp;

@@ -7,20 +7,12 @@ import Col from 'react-bootstrap/Col';
 import Grid from './Containers/Grid';
 import Charts from './Containers/Charts';
 import AccordionPanel from './Containers/AccordionPanel';
+import Header from './Containers/Header';
 
 const App = () => {
     return (
         <Container>
-            <Row>
-                <Col md={9} className="header" >
-                    <p>header</p>
-                </Col>
-
-                <Col md={3} className="buttons" >
-                    <p>buttons</p>
-                </Col>
-            </Row>
-
+            <Header />
             <Row>
                 <Col md={3} className="panel" >
                     <AccordionPanel />
