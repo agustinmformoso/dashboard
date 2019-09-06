@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Grid from './Containers/Grid';
+import AccordionPanel from './Containers/AccordionPanel';
 
 const App = () => {
     return (
@@ -12,7 +13,7 @@ const App = () => {
                 <Col md={9} className="header" >
                     <p>header</p>
                 </Col>
-                
+
                 <Col md={3} className="buttons" >
                     <p>buttons</p>
                 </Col>
@@ -20,7 +21,7 @@ const App = () => {
 
             <Row>
                 <Col md={3} className="panel" >
-                    <p>panel</p>
+                    <AccordionPanel />
                 </Col>
 
                 <Col md={9}>
