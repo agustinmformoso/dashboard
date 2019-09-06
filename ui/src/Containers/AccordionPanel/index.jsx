@@ -9,7 +9,7 @@ const AccordionPanel = () => {
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="0">
                     Teammates
-    </Accordion.Toggle>
+                </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
                     <Card.Body>Hello! I'm the body</Card.Body>
                 </Accordion.Collapse>
@@ -17,7 +17,7 @@ const AccordionPanel = () => {
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="1">
                     Sales Reports
-    </Accordion.Toggle>
+                </Accordion.Toggle>
                 <Accordion.Collapse eventKey="1">
                     <Card.Body>Hello! I'm another body</Card.Body>
                 </Accordion.Collapse>
@@ -25,7 +25,7 @@ const AccordionPanel = () => {
             <Card>
                 <Accordion.Toggle as={Card.Header} eventKey="2">
                     Sales by Day
-    </Accordion.Toggle>
+                </Accordion.Toggle>
                 <Accordion.Collapse eventKey="2">
                     <Card.Body>Hello! I'm another body</Card.Body>
                 </Accordion.Collapse>
