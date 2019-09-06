@@ -1,11 +1,11 @@
 import React from 'react'
 import "./styles.css";
-import Table from 'react-bootstrap/Container';
+import Table from 'react-bootstrap/Table';
 import TableRow from '../../Components/TableRow';
 
 const Grid = () => {
     return (
-        <Table>
+        <Table striped bordered hover>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -18,6 +18,9 @@ const Grid = () => {
             </thead>
             <tbody>
                 <TableRow />
+                <TableRow />
+                <TableRow />
+                
             </tbody>
         </Table>
     )
