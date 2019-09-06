@@ -6,14 +6,14 @@ import ButtonComp from '../../Components/Button';
 
 const Header = () => {
     return (
-        <Row>
-            <Col md={9} className="header" >
-                <p>Sales</p>
+        <Row className="header">
+            <Col md={9} className="textContainer" >
+                <p className="headerText">Sales | Name Lastname</p>
             </Col>
 
             <Col md={3} className="buttons" >
-                <ButtonComp description="EXPORT TO PDF" />
-                <ButtonComp description="SHARE" />
+                <ButtonComp description="EXPORT TO PDF" variante="light"/>
+                <ButtonComp description="SHARE" variante="primary"/>
             </Col>
         </Row>
     )
