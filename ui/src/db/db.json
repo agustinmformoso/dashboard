@@ -1,0 +1,41 @@
+{
+    "teammates": [
+      {
+        "id": 0,
+        "name": "Andrew",
+        "last-name": "Fuller",
+        "rol": "Team Lead"
+      },
+      {
+        "id": 1,
+        "name": "Nancy",
+        "last-name": "Leverling",
+        "rol": "Sales Associate"
+      },
+      {
+        "id": 2,
+        "name": "Robert",
+        "last-name": "King",
+        "rol": "Business System Analyst"
+      },
+      {
+        "id": 3,
+        "name": "Laurence",
+        "last-name": "Lebihan",
+        "rol": "Accounting Manager"
+      },
+      {
+        "id": 4,
+        "name": "Mary",
+        "last-name": "Saveley",
+        "rol": "Sales Agent"
+      },
+      {
+        "id": 5,
+        "name": "Hari",
+        "last-name": "Kumar",
+        "rol": "Sales Agent"
+      }
+    ]
+  }
+  
