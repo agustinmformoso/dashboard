@@ -22,7 +22,7 @@ const Percentage = () => {
             <span className="customer-satisfaction" >95%</span>
             <p className="caption-percentage">Customer satisfaction</p>
           </Col>
-          <Col md={12}>
+          <Col md={12} className="mt-5">
             <span className="target-sales" >95%</span>
             <p className="caption-percentage">Target sales</p>
           </Col>

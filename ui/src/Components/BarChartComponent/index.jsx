@@ -27,24 +27,64 @@ const data = [
   },
 ];
 
+const data2 = [
+  {
+    name: 'Page A', pv: 8, fill: '#0d47a1',
+  },
+  {
+    name: 'Page B', pv: 7, fill: '#4285F4',
+  },
+  {
+    name: 'Page C', pv: 5, fill: '#00C851',
+  },
+  {
+    name: 'Page D', pv: 3, fill: '#ffbb33',
+  },
+  {
+    name: 'Page E', pv: 2, fill: '#ff4444',
+  },
+  {
+    name: 'Page F', pv: 1, fill: '#e91e63',
+  },
+];
+
 const BarChartComponent = () => {
 
   return (
-    <BarChart
-      width={400}
-      height={300}
-      data={data}
-      margin={{
-        top: 5, right: 30, left: 20, bottom: 5,
-      }}
-    >
-      <CartesianGrid vertical={false} />
-      <XAxis hide={true} />
-      <YAxis type="number" />
-      <Tooltip />
-      <Bar dataKey="pv"  />
-    </BarChart>
-    )
+    <Row>
+      <Col md={6}>
+        <BarChart
+          width={300}
+          height={250}
+          data={data}
+          margin={{
+            top: 0, right: 0, left: 0, bottom: 0,
+          }}
+        >
+          <CartesianGrid vertical={false} />
+          <XAxis hide={true} />
+          <YAxis type="number" />
+          <Tooltip />
+          <Bar dataKey="pv" />
+        </BarChart>
+      </Col>
+      <Col md={6}>
+        <BarChart
+          width={300}
+          height={250}
+          data={data2}
+          margin={{
+            top: 0, right: 0, left: 47, bottom: 0,
+          }}
+        >
+          <CartesianGrid vertical={false} />
+          <XAxis hide={true} />
+          <Tooltip />
+          <Bar dataKey="pv" />
+        </BarChart>
+      </Col>
+    </Row>
+  )
 }
 
 export default BarChartComponent;
