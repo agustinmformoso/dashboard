@@ -5,12 +5,12 @@ import Col from 'react-bootstrap/Col';
 
 const AccordionItem = ({ t }) => {
     return (
-        <div className="itemContainer p-2">
+        <div className="itemContainer">
             <Row>
-                <Col md={3} className="picContainer ml-3">
+                <Col md={2} className="picContainer ml-4">
                     <img src='profilepic.jpg' alt="pic" className="profilePic" />
                 </Col>
-                <Col md={8} className="tmContainer">
+                <Col md={8} className="tmContainer ml-2">
                     <span>{t.name} {t.last_name}</span>
                     <p>{t.rol}</p>
                 </Col>

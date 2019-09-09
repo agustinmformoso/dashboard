@@ -1,7 +1,8 @@
 .profilePic{
-    width: 80%;
+    width: 90%;
     border-radius: 50%;
-    display: inline-block;
+    display: flex;
+    margin: auto;
 }
 .picContainer, .tmContainer{
     padding: 0;
