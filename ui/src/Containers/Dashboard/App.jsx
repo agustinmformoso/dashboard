@@ -4,10 +4,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Grid from './Containers/Grid';
-import Charts from './Containers/Charts';
-import AccordionPanel from './Containers/AccordionPanel';
-import Header from './Containers/Header';
+import Grid from '../../Components/Grid';
+import Charts from '../../Components/Charts';
+import AccordionPanel from '../../Components/AccordionPanel';
+import Header from '../../Components/Header';
 
 const App = () => {
     return (
