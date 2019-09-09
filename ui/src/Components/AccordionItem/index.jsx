@@ -1,16 +1,12 @@
 import React from 'react'
 import "./styles.css";
 
-const AccordionItem = () => {
+const AccordionItem = ({ t }) => {
     return (
-        <tr>
-            <td>1</td>
-            <td>Aniseed Syup</td>
-            <td>10</td>
-            <td>13</td>
-            <td>-</td>
-            <td>-</td>
-        </tr>
+        <div>
+            <p>{t.name} {t.last_name}</p>
+            <p>{t.rol}</p>
+        </div>
     )
 }
 

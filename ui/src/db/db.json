@@ -3,37 +3,37 @@
       {
         "id": 0,
         "name": "Andrew",
-        "last-name": "Fuller",
+        "last_name": "Fuller",
         "rol": "Team Lead"
       },
       {
         "id": 1,
         "name": "Nancy",
-        "last-name": "Leverling",
+        "last_name": "Leverling",
         "rol": "Sales Associate"
       },
       {
         "id": 2,
         "name": "Robert",
-        "last-name": "King",
+        "last_name": "King",
         "rol": "Business System Analyst"
       },
       {
         "id": 3,
         "name": "Laurence",
-        "last-name": "Lebihan",
+        "last_name": "Lebihan",
         "rol": "Accounting Manager"
       },
       {
         "id": 4,
         "name": "Mary",
-        "last-name": "Saveley",
+        "last_name": "Saveley",
         "rol": "Sales Agent"
       },
       {
         "id": 5,
         "name": "Hari",
-        "last-name": "Kumar",
+        "last_name": "Kumar",
         "rol": "Sales Agent"
       }
     ]
