@@ -16,11 +16,11 @@ const Percentage = () => {
     
     return (
         <div>
-            <span>95%</span>
+            <span className="customer-satisfaction" >95%</span>
             <p>Customer satisfaction</p>
 
-            <span>95%</span>
-            <p>Customer satisfaction</p>
+            <span className="target-sales" >95%</span>
+            <p>Target sales</p>
         </div>
     )
 }

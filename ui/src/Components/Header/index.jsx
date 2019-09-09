@@ -14,6 +14,7 @@ const Header = () => {
             <Col md={3} className="buttons" >
                 <ButtonComp description="EXPORT TO PDF" variante="light"/>
                 <ButtonComp description="SHARE" variante="primary"/>
+                
             </Col>
         </Row>
     )
