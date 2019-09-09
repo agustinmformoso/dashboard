@@ -2,6 +2,7 @@ import React from 'react';
 import "./styles.css";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
+import AccordionItem from '../AccordionItem';
 
 const AccordionPanel = () => {
     return (
@@ -11,7 +12,9 @@ const AccordionPanel = () => {
                     Teammates
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
-                    <Card.Body>Hello! I'm the body</Card.Body>
+                    <Card.Body>
+                        <AccordionItem />
+                    </Card.Body>
                 </Accordion.Collapse>
             </Card>
             <Card>
