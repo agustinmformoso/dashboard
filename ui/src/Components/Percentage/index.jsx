@@ -15,12 +15,12 @@ const data = [
 const Percentage = () => {
     
     return (
-        <div>
+        <div className="text-center">
             <span className="customer-satisfaction" >95%</span>
-            <p>Customer satisfaction</p>
+            <p className="caption-percentage">Customer satisfaction</p>
 
             <span className="target-sales" >95%</span>
-            <p>Target sales</p>
+            <p className="caption-percentage">Target sales</p>
         </div>
     )
 }

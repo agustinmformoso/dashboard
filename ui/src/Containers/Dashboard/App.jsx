@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {usestate} from 'react';
 import "./styles.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
@@ -8,10 +8,11 @@ import Grid from '../../Components/Grid';
 import Charts from '../../Components/Charts';
 import AccordionPanel from '../../Components/AccordionPanel';
 import Header from '../../Components/Header';
+import db from '../../db/db.json';
 
 const App = () => {
     return (
-        <Container>
+        <Container fluid={true}>
             <Header />
             <Row>
                 <Col md={3} className="panel" >
