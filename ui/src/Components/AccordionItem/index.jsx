@@ -1,11 +1,11 @@
 import React from 'react'
 import "./styles.css";
 
-const AccordionItem = () => {
+const AccordionItem = ({ t }) => {
     return (
         <div>
-            <p>Andrew Fuller</p>
-            <p>Team Lead</p>
+            <p>{t.name} {t.last_name}</p>
+            <p>{t.rol}</p>
         </div>
     )
 }

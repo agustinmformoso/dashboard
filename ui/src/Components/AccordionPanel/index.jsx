@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./styles.css";
 import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import AccordionItem from '../AccordionItem';
+import data from '../../db/db.json';
 
 const AccordionPanel = () => {
     return (
@@ -13,7 +14,13 @@ const AccordionPanel = () => {
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
                     <Card.Body>
-                        <AccordionItem />
+                        <div>
+                            {
+                                data.teammates.map((t) => (
+                                    <AccordionItem t={t} />
+                                )
+                                )}
+                        </div>
                     </Card.Body>
                 </Accordion.Collapse>
             </Card>
