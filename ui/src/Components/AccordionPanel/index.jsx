@@ -13,11 +13,6 @@ const AccordionPanel = () => {
                     Teammates
                 </Accordion.Toggle>
                 <Accordion.Collapse eventKey="0">
-<<<<<<< HEAD
-
-
-                    <Card.Body>Hello! I'm the body</Card.Body>
-=======
                     <Card.Body>
                         <div>
                             {
@@ -27,7 +22,6 @@ const AccordionPanel = () => {
                                 )}
                         </div>
                     </Card.Body>
->>>>>>> 6c5c956010c89151079021b590bc3bea6a60a0cc
                 </Accordion.Collapse>
             </Card>
             <Card>

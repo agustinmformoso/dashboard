@@ -10,18 +10,18 @@ const Charts = () => {
     return (
         <Row>
 
-            <Col md={3} className="chart-1" >
-                <PieChartComponent />
+            <Col md={3} className="chart-1">
+                <PieChartComponent  />
             </Col>
 
             
-            <Col md={2} className="chart-2" >
+            <Col md={2} className="chart-2">
                 <Percentage />
             </Col>
         
 
             <Col md={6} className="chart-3" >
-                <BarChartComponent />
+                <BarChartComponent  />
             </Col>
         </Row>
     )

@@ -1,5 +1,7 @@
 import React from 'react';
 import "./styles.css";
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import {
     PieChart, Pie, Sector, Cell,
   } from 'recharts';
@@ -15,13 +17,16 @@ const data = [
 const Percentage = () => {
     
     return (
-        <div className="text-center">
+        <Row className="text-center">
+          <Col md={12}>
             <span className="customer-satisfaction" >95%</span>
             <p className="caption-percentage">Customer satisfaction</p>
-
+          </Col>
+          <Col md={12}>
             <span className="target-sales" >95%</span>
             <p className="caption-percentage">Target sales</p>
-        </div>
+          </Col>
+        </Row>
     )
 }
 

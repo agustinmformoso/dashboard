@@ -1,15 +1,16 @@
 import React from 'react'
 import "./styles.css";
+import Form from 'react-bootstrap/Form'
 
-const TableRow = () => {
+const TableRow = ({ c }) => {
     return (
         <tr>
-            <td>1</td>
-            <td>Aniseed Syup</td>
-            <td>10</td>
-            <td>13</td>
+            <td className="text-center">{c.id}</td>
+            <td>{c.name}</td>
+            <td className="text-center">{c.price}</td>
+            <td className="text-center">{c.stock}</td>
             <td>-</td>
-            <td>-</td>
+            <td className="text-center"><Form.Check type="checkbox" checked={c.active} /></td>
         </tr>
     )
 }
