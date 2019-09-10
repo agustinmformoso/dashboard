@@ -8,7 +8,7 @@ import Percentage from '../../Components/Percentage';
 
 const Charts = () => {
     return (
-        <Row>
+        <Row className="charts">
 
             <Col md={3} className="chart-1">
                 <PieChartComponent />

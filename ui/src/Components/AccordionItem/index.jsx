@@ -3,19 +3,22 @@ import "./styles.css";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-const AccordionItem = ({ t }) => {
+// props:
+// teammates = array "dfjsdklfjsdlk"
+
+const AccordionItem = ({ teammates }) => {
     return (
-        <div className="itemContainer">
-            <Row>
+   
+            <Row className="itemContainer">
                 <Col md={2} className="picContainer ml-4 mt-2">
                     <img src='profilepic.jpg' alt="pic" className="profilePic" />
                 </Col>
                 <Col md={8} className="tmContainer ml-2">
-                    <span>{t.name} {t.last_name}</span>
-                    <p>{t.rol}</p>
+                    <span>{teammates.name} {teammates.last_name}</span>
+                    <p>{teammates.rol}</p>
                 </Col>
             </Row>
-        </div>
+   
     )
 }
 
