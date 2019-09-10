@@ -12,9 +12,8 @@ const Header = () => {
             </Col>
 
             <Col md={3} className="buttons" >
-                <ButtonComp description="EXPORT TO PDF" variante="light"/>
-                <ButtonComp description="SHARE" variante="primary"/>
-                
+                <ButtonComp className="float-right" description="SHARE" variante="primary"/>
+                <ButtonComp className="float-right mr-1" description="EXPORT TO PDF" variante="light"/>                                
             </Col>
         </Row>
     )
