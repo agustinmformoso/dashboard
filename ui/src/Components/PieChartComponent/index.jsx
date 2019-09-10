@@ -1,7 +1,7 @@
 import React from 'react';
 import "./styles.css";
 import {
-    PieChart, Pie, Sector, Cell,
+    PieChart, Pie, Cell,
   } from 'recharts';
 
   const data = [
@@ -35,14 +35,13 @@ const PieChartComponent = () => {
     return (
       <PieChart
         width={400}
-        height={400}
+        height={200}
         margin={{
-          top: 0, right: 0, left: 0, bottom: 0,
+          top: 0, right: 150, left: 0, bottom: 0,
         }}>
       <Pie
         data={data}
-        cx={120}
-        cy={200}
+
         labelLine={false}
         label={renderCustomizedLabel}
         outerRadius={80}

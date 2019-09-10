@@ -3,7 +3,7 @@ import "./styles.css";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {
-  BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, Legend,
+  BarChart, Bar, XAxis, YAxis, CartesianGrid,
 } from 'recharts';
 
 const data = [
