@@ -2,9 +2,9 @@ import React from 'react'
 import "./styles.css";
 import Button from 'react-bootstrap/Button';
 
-const ButtonComp = ({ description, variante }) => {
+const ButtonComp = ({ description, variante, className}) => {
     return (
-        <Button variant={variante}>{description}</Button>
+        <Button className={className} variant={variante}>{description}</Button>
     )
 }
 

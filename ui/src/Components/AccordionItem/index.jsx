@@ -7,7 +7,7 @@ const AccordionItem = ({ t }) => {
     return (
         <div className="itemContainer">
             <Row>
-                <Col md={2} className="picContainer ml-4">
+                <Col md={2} className="picContainer ml-4 mt-2">
                     <img src='profilepic.jpg' alt="pic" className="profilePic" />
                 </Col>
                 <Col md={8} className="tmContainer ml-2">

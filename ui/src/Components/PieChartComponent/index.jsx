@@ -33,7 +33,12 @@ import {
 const PieChartComponent = () => {
     
     return (
-      <PieChart width={400} height={400}>
+      <PieChart
+        width={400}
+        height={400}
+        margin={{
+          top: 0, right: 0, left: 0, bottom: 0,
+        }}>
       <Pie
         data={data}
         cx={120}

@@ -11,7 +11,7 @@ const Charts = () => {
         <Row>
 
             <Col md={3} className="chart-1">
-                <PieChartComponent  />
+                <PieChartComponent />
             </Col>
 
             

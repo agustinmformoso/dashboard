@@ -8,7 +8,6 @@ import Grid from '../../Components/Grid';
 import Charts from '../../Components/Charts';
 import AccordionPanel from '../../Components/AccordionPanel';
 import Header from '../../Components/Header';
-import db from '../../db/db.json';
 
 const App = () => {
     return (

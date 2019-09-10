@@ -64,7 +64,6 @@ const BarChartComponent = () => {
           <CartesianGrid vertical={false} />
           <XAxis hide={true} />
           <YAxis type="number" />
-          <Tooltip />
           <Bar dataKey="pv" />
         </BarChart>
       </Col>
@@ -79,7 +78,6 @@ const BarChartComponent = () => {
         >
           <CartesianGrid vertical={false} />
           <XAxis hide={true} />
-          <Tooltip />
           <Bar dataKey="pv" />
         </BarChart>
       </Col>
