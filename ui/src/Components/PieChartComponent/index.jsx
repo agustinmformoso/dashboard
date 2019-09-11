@@ -24,12 +24,12 @@ import {
   
  
 
-const PieChartComponent = ({ pieChartData, colors, height, width, margin, PieChartInnerRadius, PieChartOuterRadius, PieChartLabelLine, PieChartFill }) => {
+const PieChartComponent = ({ pieChartData, colors, PieChartHeight, PieChartWidth, PieChartMargin, PieChartInnerRadius, PieChartOuterRadius, PieChartLabelLine, PieChartFill }) => {
     return (
       <PieChart
-        width={width}
-        height={height}
-        margin={margin}
+        width={PieChartWidth}
+        height={PieChartHeight}
+        margin={PieChartMargin}
       >
       <Pie
         data={pieChartData}

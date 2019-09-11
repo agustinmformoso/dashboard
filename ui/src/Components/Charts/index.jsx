@@ -6,24 +6,24 @@ import PieChartComponent from '../../Components/PieChartComponent';
 import BarChartComponent from '../../Components/BarChartComponent';
 import Percentage from '../../Components/Percentage';
 
-const Charts = ({ pieChartData, barChartData1, barChartData2, colors, width, height, margin, PieChartInnerRadius, PieChartOuterRadius, PieChartLabelLine, PieChartFill }) => {
-    console.log(barChartData1)
-    console.log(barChartData2)
+const Charts = ({ pieChartData, barChartData1, barChartData2, colors, PieChartWidth, PieChartHeight, PieChartMargin, PieChartInnerRadius, PieChartOuterRadius, PieChartLabelLine, PieChartFill, BarChartWidth, BarChartHeight, BarChartMargin }) => {
+    console.log(BarChartHeight)
+    console.log(BarChartMargin)
+    console.log(BarChartWidth)
     return (
         <Row className="charts">
 
             <Col md={3} className="chart-1">
                 <PieChartComponent
                     pieChartData={pieChartData}
-                    height={height}
-                    width={width}
-                    margin={margin}
-                    /* colors={colors} */
-
+                    PieChartHeight={PieChartHeight}
+                    PieChartWidth={PieChartWidth}
+                    PieChartMargin={PieChartMargin}
                     PieChartInnerRadius = {PieChartInnerRadius}
                     PieChartOuterRadius = {PieChartOuterRadius}
                     PieChartLabelLine = {PieChartLabelLine}
                     PieChartFill = {PieChartFill}
+                    /* colors={colors} */
                 />
             </Col>
 
@@ -37,6 +37,9 @@ const Charts = ({ pieChartData, barChartData1, barChartData2, colors, width, hei
                 <BarChartComponent  
                     barChartData1={barChartData1}
                     barChartData2={barChartData2}
+                    BarChartWidth = {BarChartWidth}
+                    BarChartHeight = {BarChartHeight}
+                    BarChartMargin = {BarChartMargin}
                 />
             </Col>
         </Row>

@@ -8,20 +8,16 @@ import {
 
 
 
-const BarChartComponent = ({ barChartData1, barChartData2 }) => {
-  console.log(barChartData1)
-  console.log(barChartData2)
+const BarChartComponent = ({ barChartData1, barChartData2, BarChartWidth, BarChartHeight, BarChartMargin }) => {
 
   return (
     <Row>
       <Col md={6}>
         <BarChart
-          width={300}
-          height={250}
+          width={BarChartWidth}
+          height={BarChartHeight}
           data={barChartData1}
-          margin={{
-            top: 0, right: 0, left: 0, bottom: 0,
-          }}
+          margin={BarChartMargin}
         >
           <CartesianGrid vertical={false} />
           <XAxis hide={true} />
@@ -31,12 +27,10 @@ const BarChartComponent = ({ barChartData1, barChartData2 }) => {
       </Col>
       <Col md={6}>
         <BarChart
-          width={300}
-          height={250}
+          width={BarChartWidth}
+          height={BarChartHeight}
           data={barChartData2}
-          margin={{
-            top: 0, right: 0, left: 47, bottom: 0,
-          }}
+          margin={BarChartMargin}
         >
           <CartesianGrid vertical={false} />
           <XAxis hide={true} />

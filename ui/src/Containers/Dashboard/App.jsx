@@ -66,11 +66,15 @@ const App = () => {
 
     const PieChartWidth = 400;
     const PieChartHeight = 200;
-    const PieChartMargin = {top: 0, right: 150, left: 0, bottom: 0,};
+    const PieChartMargin = {top: 0, right: 150, left: 0, bottom: 0};
     const PieChartInnerRadius = 40;
     const PieChartOuterRadius = 100;
     const PieChartLabelLine = false;
     const PieChartFill = '8884d8';
+
+    const BarChartWidth = 300;
+    const BarChartHeight = 250;
+    const BarChartMargin = {top: 0, right: 0, left: 47, bottom: 0};
 
     return (
         <Container fluid={true}>
@@ -85,13 +89,17 @@ const App = () => {
                         pieChartData={pieChartData}
                         barChartData1={barChartData_1}
                         barChartData2={barChartData_2}
-                        width={PieChartWidth}
-                        height={PieChartHeight}
-                        margin={PieChartMargin}
+                        PieChartWidth={PieChartWidth}
+                        PieChartHeight={PieChartHeight}
+                        PieChartMargin={PieChartMargin}
                         PieChartInnerRadius = {PieChartInnerRadius}
                         PieChartOuterRadius = {PieChartOuterRadius}
                         PieChartLabelLine = {PieChartLabelLine}
                         PieChartFill = {PieChartFill}
+                        
+                        BarChartWidth = {BarChartWidth}
+                        BarChartHeight = {BarChartHeight}
+                        BarChartMargin = {BarChartMargin}
                         
                         /* colors={colors} => En caso de que quiera usar un array de colores  */ 
                     />
