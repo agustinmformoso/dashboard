@@ -1,21 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect} from 'react';
 import "./styles.css";
 import {
     PieChart, Pie, Cell,
   } from 'recharts';
+  
+ // Funcion que muestra el label del gráfico adentro de cada "porción".
 
-  const data = [
-    { name: 'Group A', value: 17 },
-    { name: 'Group B', value: 23 },
-    { name: 'Group C', value: 11 },
-    { name: 'Group D', value: 5 },
-    { name: 'Group E', value: 22 },
-    { name: 'Group F', value: 19 },
-  ];
-  
-  const COLORS = ['#0d47a1', '#4285F4', '#00C851', '#ffbb33', '#ff4444', '#e91e63'];
-  
   const RADIAN = Math.PI / 180;
+
   const renderCustomizedLabel = ({
     cx, cy, midAngle, innerRadius, outerRadius, percent, index, value
   }) => {
@@ -29,29 +21,27 @@ import {
       </text>
     );
   };
+  
+ 
 
-const PieChartComponent = () => {
-    
+const PieChartComponent = ({ pieChartData, colors, height, width, margin, PieChartInnerRadius, PieChartOuterRadius, PieChartLabelLine, PieChartFill }) => {
     return (
       <PieChart
-        width={400}
-        height={200}
-        margin={{
-          top: 0, right: 150, left: 0, bottom: 0,
-        }}>
+        width={width}
+        height={height}
+        margin={margin}
+      >
       <Pie
-        data={data}
-
-        labelLine={false}
+        data={pieChartData}
+        labelLine={PieChartLabelLine}
         label={renderCustomizedLabel}
-        outerRadius={80}
-        fill="#8884d8"
-        innerRadius={40}
-        outerRadius={100}
+        fill={PieChartFill}
+        innerRadius={PieChartInnerRadius}
+        outerRadius={PieChartOuterRadius}
         dataKey="value"
       >
         {
-          data.map((entry, index) => <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />)
+          pieChartData.map((entry, index) => <Cell key={`cell-${index}`} /* fill={colors[index % colors.length]} */ />)
         }
       </Pie>
     </PieChart>

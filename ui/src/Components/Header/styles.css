@@ -11,6 +11,7 @@
     .buttons {
         display: flex;
         justify-content: center;
+        margin-bottom: 10px;
     }
     .buttons :first-child {
         margin-right: 5px;

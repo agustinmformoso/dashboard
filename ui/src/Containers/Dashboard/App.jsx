@@ -11,6 +11,67 @@ import Header from '../../Components/Header';
 import data from '../../db/db.json';
 
 const App = () => {
+    const pieChartData = [
+        { name: 'Group A', value: 17, fill: '#0d47a1' },
+        { name: 'Group B', value: 23, fill: '#4285F4' },
+        { name: 'Group C', value: 11, fill: '#00C851' },
+        { name: 'Group D', value: 5, fill: '#ffbb33' },
+        { name: 'Group E', value: 22, fill: '#ff4444' },
+        { name: 'Group F', value: 19, fill: '#e91e63' },
+    ];
+
+    const barChartData_1 = [
+        {
+          name: 'Page A', pv: 4, fill: '#0d47a1',
+        },
+        {
+          name: 'Page B', pv: 5, fill: '#4285F4',
+        },
+        {
+          name: 'Page C', pv: 3, fill: '#00C851',
+        },
+        {
+          name: 'Page D', pv: 1, fill: '#ffbb33',
+        },
+        {
+          name: 'Page E', pv: 4, fill: '#ff4444',
+        },
+        {
+          name: 'Page F', pv: 2, fill: '#e91e63',
+        },
+    ];
+      
+    const barChartData_2 = [
+        {
+          name: 'Page A', pv: 8, fill: '#0d47a1',
+        },
+        {
+          name: 'Page B', pv: 7, fill: '#4285F4',
+        },
+        {
+          name: 'Page C', pv: 5, fill: '#00C851',
+        },
+        {
+          name: 'Page D', pv: 3, fill: '#ffbb33',
+        },
+        {
+          name: 'Page E', pv: 2, fill: '#ff4444',
+        },
+        {
+          name: 'Page F', pv: 1, fill: '#e91e63',
+        },
+    ];
+
+    // const colors = ['#0d47a1', '#4285F4', '#00C851', '#ffbb33', '#ff4444', '#e91e63'];
+
+    const PieChartWidth = 400;
+    const PieChartHeight = 200;
+    const PieChartMargin = {top: 0, right: 150, left: 0, bottom: 0,};
+    const PieChartInnerRadius = 40;
+    const PieChartOuterRadius = 100;
+    const PieChartLabelLine = false;
+    const PieChartFill = '8884d8';
+
     return (
         <Container fluid={true}>
             <Header />
@@ -20,11 +81,26 @@ const App = () => {
                 </Col>
 
                 <Col md={9}>
-                    {/* <Charts data={} with={} height={} margin={} /> */}
+                    <Charts
+                        pieChartData={pieChartData}
+                        barChartData1={barChartData_1}
+                        barChartData2={barChartData_2}
+                        width={PieChartWidth}
+                        height={PieChartHeight}
+                        margin={PieChartMargin}
+                        PieChartInnerRadius = {PieChartInnerRadius}
+                        PieChartOuterRadius = {PieChartOuterRadius}
+                        PieChartLabelLine = {PieChartLabelLine}
+                        PieChartFill = {PieChartFill}
+                        
+                        /* colors={colors} => En caso de que quiera usar un array de colores  */ 
+                    />
 
                     <Row>
                         <Col md={12} className="grid" >
-                            {/* <Grid data={data}/> */}
+                            <Grid
+                                data={data}
+                            />
                         </Col>
                     </Row>
                 </Col>
