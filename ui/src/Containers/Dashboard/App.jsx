@@ -64,17 +64,21 @@ const App = () => {
 
     // const colors = ['#0d47a1', '#4285F4', '#00C851', '#ffbb33', '#ff4444', '#e91e63'];
 
-    const PieChartWidth = 400;
-    const PieChartHeight = 200;
-    const PieChartMargin = {top: 0, right: 150, left: 0, bottom: 0};
-    const PieChartInnerRadius = 40;
-    const PieChartOuterRadius = 100;
-    const PieChartLabelLine = false;
-    const PieChartFill = '8884d8';
+    const pieChartConfig = {
+        pieChartWidth: 400,
+        pieChartHeight: 200,
+        pieChartMargin: {top: 0, right: 150, left: 0, bottom: 0},
+        pieChartInnerRadius: 40,
+        pieChartOuterRadius: 100,
+        pieChartLabelLine: false,
+        pieChartFill: '8884d8'
+    }
 
-    const BarChartWidth = 300;
-    const BarChartHeight = 250;
-    const BarChartMargin = {top: 0, right: 0, left: 47, bottom: 0};
+    const barChartConfig = {
+        barChartWidth: 300,
+        barChartHeight: 250,
+        barChartMargin: {top: 0, right: 0, left: 47, bottom: 0}
+    }
 
     return (
         <Container fluid={true}>
@@ -89,17 +93,8 @@ const App = () => {
                         pieChartData={pieChartData}
                         barChartData1={barChartData_1}
                         barChartData2={barChartData_2}
-                        PieChartWidth={PieChartWidth}
-                        PieChartHeight={PieChartHeight}
-                        PieChartMargin={PieChartMargin}
-                        PieChartInnerRadius = {PieChartInnerRadius}
-                        PieChartOuterRadius = {PieChartOuterRadius}
-                        PieChartLabelLine = {PieChartLabelLine}
-                        PieChartFill = {PieChartFill}
-                        
-                        BarChartWidth = {BarChartWidth}
-                        BarChartHeight = {BarChartHeight}
-                        BarChartMargin = {BarChartMargin}
+                        barChartConfig={barChartConfig}
+                        pieChartConfig={pieChartConfig}
                         
                         /* colors={colors} => En caso de que quiera usar un array de colores  */ 
                     />

@@ -18,11 +18,11 @@ const Grid = ({ data }) => {
                 </tr>
             </thead>
             <tbody>
-                {
+                {/* {
                     data.clients.map((clients) => (
                         <TableRow clients={clients} />
                     ))
-                }           
+                }            */}
             </tbody>
         </Table>
     )

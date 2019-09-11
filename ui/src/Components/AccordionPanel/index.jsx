@@ -9,7 +9,7 @@ const AccordionPanel = ({ data }) => {
     const [expandTmView, setExpandTmView] = useState(false);
     const [expandSalesReportsView, setExpandSalesReportsView] = useState(false);
     const [expandSalesDayView, setExpandSalesDayView] = useState(false);
-
+    
     return (
         <Accordion>
             <Card>
@@ -20,11 +20,11 @@ const AccordionPanel = ({ data }) => {
                 <Accordion.Collapse eventKey="0">
                     <Card.Body className="p-0">
                         <div>
-                            {
+                            {/* {
                                 data.teammates.map((teammates) => (
                                     <AccordionItem teammates={teammates} />
                                 )
-                                )}
+                                )} */}
                         </div>
                     </Card.Body>
                 </Accordion.Collapse>

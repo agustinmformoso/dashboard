@@ -6,23 +6,14 @@ import PieChartComponent from '../../Components/PieChartComponent';
 import BarChartComponent from '../../Components/BarChartComponent';
 import Percentage from '../../Components/Percentage';
 
-const Charts = ({ pieChartData, barChartData1, barChartData2, colors, PieChartWidth, PieChartHeight, PieChartMargin, PieChartInnerRadius, PieChartOuterRadius, PieChartLabelLine, PieChartFill, BarChartWidth, BarChartHeight, BarChartMargin }) => {
-    console.log(BarChartHeight)
-    console.log(BarChartMargin)
-    console.log(BarChartWidth)
+const Charts = ({ pieChartData, barChartData1, barChartData2, colors, pieChartConfig , barChartConfig }) => {
     return (
         <Row className="charts">
 
             <Col md={3} className="chart-1">
                 <PieChartComponent
                     pieChartData={pieChartData}
-                    PieChartHeight={PieChartHeight}
-                    PieChartWidth={PieChartWidth}
-                    PieChartMargin={PieChartMargin}
-                    PieChartInnerRadius = {PieChartInnerRadius}
-                    PieChartOuterRadius = {PieChartOuterRadius}
-                    PieChartLabelLine = {PieChartLabelLine}
-                    PieChartFill = {PieChartFill}
+                    pieChartConfig={pieChartConfig}
                     /* colors={colors} */
                 />
             </Col>
@@ -37,9 +28,7 @@ const Charts = ({ pieChartData, barChartData1, barChartData2, colors, PieChartWi
                 <BarChartComponent  
                     barChartData1={barChartData1}
                     barChartData2={barChartData2}
-                    BarChartWidth = {BarChartWidth}
-                    BarChartHeight = {BarChartHeight}
-                    BarChartMargin = {BarChartMargin}
+                    barChartConfig={barChartConfig}
                 />
             </Col>
         </Row>

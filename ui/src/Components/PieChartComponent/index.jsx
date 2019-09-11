@@ -24,20 +24,21 @@ import {
   
  
 
-const PieChartComponent = ({ pieChartData, colors, PieChartHeight, PieChartWidth, PieChartMargin, PieChartInnerRadius, PieChartOuterRadius, PieChartLabelLine, PieChartFill }) => {
+const PieChartComponent = ({ pieChartData, colors, pieChartConfig }) => {
+  console.log(pieChartConfig.pieChartWidth)
     return (
       <PieChart
-        width={PieChartWidth}
-        height={PieChartHeight}
-        margin={PieChartMargin}
+        width={pieChartConfig.pieChartWidth}
+        height={pieChartConfig.pieChartHeight}
+        margin={pieChartConfig.pieChartMargin}
       >
       <Pie
         data={pieChartData}
-        labelLine={PieChartLabelLine}
+        labelLine={pieChartConfig.pieChartLabelLine}
         label={renderCustomizedLabel}
-        fill={PieChartFill}
-        innerRadius={PieChartInnerRadius}
-        outerRadius={PieChartOuterRadius}
+        fill={pieChartConfig.pieChartFill}
+        innerRadius={pieChartConfig.pieChartInnerRadius}
+        outerRadius={pieChartConfig.pieChartOuterRadius}
         dataKey="value"
       >
         {

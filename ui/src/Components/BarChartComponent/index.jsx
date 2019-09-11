@@ -6,18 +6,15 @@ import {
   BarChart, Bar, XAxis, YAxis, CartesianGrid,
 } from 'recharts';
 
-
-
-const BarChartComponent = ({ barChartData1, barChartData2, BarChartWidth, BarChartHeight, BarChartMargin }) => {
-
+const BarChartComponent = ({ barChartData1, barChartData2, barChartConfig }) => {
   return (
     <Row>
       <Col md={6}>
         <BarChart
-          width={BarChartWidth}
-          height={BarChartHeight}
+          width={barChartConfig.barChartWidth}
+          height={barChartConfig.barChartHeight}
           data={barChartData1}
-          margin={BarChartMargin}
+          margin={barChartConfig.barChartMargin}
         >
           <CartesianGrid vertical={false} />
           <XAxis hide={true} />
@@ -27,10 +24,10 @@ const BarChartComponent = ({ barChartData1, barChartData2, BarChartWidth, BarCha
       </Col>
       <Col md={6}>
         <BarChart
-          width={BarChartWidth}
-          height={BarChartHeight}
+          width={barChartConfig.barChartWidth}
+          height={barChartConfig.barChartHeight}
           data={barChartData2}
-          margin={BarChartMargin}
+          margin={barChartConfig.barChartMargin}
         >
           <CartesianGrid vertical={false} />
           <XAxis hide={true} />
