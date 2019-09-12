@@ -4,25 +4,62 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import AccordionItem from '../AccordionItem';
 import { GLOBAL } from '../../Config/global';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 const AccordionPanel = ({ data }) => {
     const [expandTmView, setExpandTmView] = useState(false);
     const [expandSalesReportsView, setExpandSalesReportsView] = useState(false);
     const [expandSalesDayView, setExpandSalesDayView] = useState(false);
-    const [fetchData, setFetchData] = useState([]);
+    const [fetchData, setFetchData] = useState();
+
+    const fetchingData = data;
+
+    // setFetchData(
+    //     fetchingData.map((i) => (
+    //         <Row className="itemContainer">
+    //             <Col md={2} className="picContainer ml-4 mt-2">
+    //                 <img src='profilepic.jpg' alt="pic" className="profilePic" />
+    //             </Col>
+    //             <Col md={8} className="tmContainer ml-2">
+    //                 <span>{i.name} {i.last_name}</span>
+    //                 <p>{i.rol}</p>
+    //             </Col>
+    //         </Row>
+    //     ))
+    // )
+
+    console.log(fetchingData);    
 
     useEffect(() => {
         handleFetch();
     }, []);
 
     const handleFetch = () => {
-        if (data.teammates.length > 0){
-            setFetchData(data.teammates.map((teammates) => (
-                <AccordionItem teammates={teammates} />
+        if (fetchingData.length === 0){
+            setFetchData(
+                <Row className="itemContainer">
+                    <Col md={{ offset: 1 }}></Col>
+                    <Col md={6} className="mt-2 mb-2">
+                        <span>No hay datos</span>
+                    </Col>
+                    <Col md={{ offset: 1 }}></Col>
+                </Row>
             )
-            ))    
         } else {
-            setFetchData("No hay registros");
+            setFetchData(
+                fetchingData.map((i) => (
+                    <Row className="itemContainer">
+                        <Col md={2} className="picContainer ml-4 mt-2">
+                            <img src='profilepic.jpg' alt="pic" className="profilePic" />
+                        </Col>
+                        <Col md={8} className="tmContainer ml-2">
+                            <span>{i.name ? i.name : "error_nombre"} {i.last_name ? i.last_name : "error_last_name"}</span>
+                            <p>{i.rol ? i.rol : "error_rol"}</p>
+                        </Col>
+                    </Row>
+                ))
+            )            
         }
     }
 
@@ -36,15 +73,7 @@ const AccordionPanel = ({ data }) => {
                 <Accordion.Collapse eventKey="0">
                     <Card.Body className="p-0">
                         <div>
-<<<<<<< HEAD
-                            {/* {
-                                data.teammates.map((teammates) => (
-                                    <AccordionItem teammates={teammates} />
-                                )
-                                )} */}
-=======
                             {fetchData}
->>>>>>> 8d7f4b79b3a07d15947802f0c8c3fcee817a6d7d
                         </div>
                     </Card.Body>
                 </Accordion.Collapse>
