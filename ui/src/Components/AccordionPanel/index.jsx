@@ -9,6 +9,22 @@ const AccordionPanel = ({ data }) => {
     const [expandTmView, setExpandTmView] = useState(false);
     const [expandSalesReportsView, setExpandSalesReportsView] = useState(false);
     const [expandSalesDayView, setExpandSalesDayView] = useState(false);
+    const [fetchData, setFetchData] = useState([]);
+
+    useEffect(() => {
+        handleFetch();
+    }, []);
+
+    const handleFetch = () => {
+        if (data.teammates.length > 0){
+            setFetchData(data.teammates.map((teammates) => (
+                <AccordionItem teammates={teammates} />
+            )
+            ))    
+        } else {
+            setFetchData("No hay registros");
+        }
+    }
 
     return (
         <Accordion>
@@ -20,11 +36,7 @@ const AccordionPanel = ({ data }) => {
                 <Accordion.Collapse eventKey="0">
                     <Card.Body className="p-0">
                         <div>
-                            {
-                                data.teammates.map((teammates) => (
-                                    <AccordionItem teammates={teammates} />
-                                )
-                                )}
+                            {fetchData}
                         </div>
                     </Card.Body>
                 </Accordion.Collapse>
