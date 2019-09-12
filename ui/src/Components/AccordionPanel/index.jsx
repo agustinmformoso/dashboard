@@ -67,7 +67,7 @@ const AccordionPanel = ({ data }) => {
     return (
         <Accordion>
             <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="0" className="cardHeader" onClick={() => setExpandTmView(!expandTmView)}>
+                <Accordion.Toggle as={Card.Header} eventKey="0" className="cardHeader" onClick={() => {setExpandTmView(!expandTmView);setExpandSalesReportsView(false);setExpandSalesDayView(false)}}>
                     {GLOBAL.ACCORDION.OPTION1}
                     <img src='angle-down-solid.svg' alt="arrowdown" className={'arrowdown float-right ' + (expandTmView && 'expanded')} />
                 </Accordion.Toggle>
@@ -80,7 +80,7 @@ const AccordionPanel = ({ data }) => {
                 </Accordion.Collapse>
             </Card>
             <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="1" className="cardHeader" onClick={() => setExpandSalesReportsView(!expandSalesReportsView)}>
+                <Accordion.Toggle as={Card.Header} eventKey="1" className="cardHeader" onClick={() => {setExpandSalesReportsView(!expandSalesReportsView);setExpandTmView(false);setExpandSalesDayView(false)}}>
                     {GLOBAL.ACCORDION.OPTION2}
                     <img src='angle-down-solid.svg' alt="arrowdown" className={'arrowdown float-right ' + (expandSalesReportsView && 'expanded')} />
                 </Accordion.Toggle>
@@ -89,7 +89,7 @@ const AccordionPanel = ({ data }) => {
                 </Accordion.Collapse>
             </Card>
             <Card>
-                <Accordion.Toggle as={Card.Header} eventKey="2" className="cardHeader" onClick={() => setExpandSalesDayView(!expandSalesDayView)}>
+                <Accordion.Toggle as={Card.Header} eventKey="2" className="cardHeader" onClick={() => {setExpandSalesDayView(!expandSalesDayView);setExpandTmView(false);setExpandSalesReportsView(false)}}>
                     {GLOBAL.ACCORDION.OPTION3}
                     <img src='angle-down-solid.svg' alt="arrowdown" className={'arrowdown float-right ' + (expandSalesDayView && 'expanded')} />
                 </Accordion.Toggle>
