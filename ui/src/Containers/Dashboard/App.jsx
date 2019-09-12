@@ -11,6 +11,7 @@ import Header from '../../Components/Header';
 import data from '../../db/db.json';
 
 const App = () => {
+
     const pieChartData = [
         { name: 'Group A', value: 17, fill: '#0d47a1' },
         { name: 'Group B', value: 23, fill: '#4285F4' },
@@ -79,6 +80,16 @@ const App = () => {
         barChartHeight: 250,
         barChartMargin: {top: 0, right: 0, left: 47, bottom: 0}
     }
+
+    // const PieConfig = { 
+    //     PieChartWidth : 400,
+    //     PieChartHeight : 200,
+    //     PieChartMargin : {top: 0, right: 150, left: 0, bottom: 0,},
+    //     PieChartInnerRadius : 40,
+    //     PieChartOuterRadius : 100,
+    //     PieChartLabelLine : false,
+    //     PieChartFill : '8884d8'
+    // }
 
     return (
         <Container fluid={true}>
