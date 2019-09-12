@@ -4,6 +4,7 @@ import Accordion from 'react-bootstrap/Accordion';
 import Card from 'react-bootstrap/Card';
 import AccordionItem from '../AccordionItem';
 import { GLOBAL } from '../../Config/global';
+import { ERROR } from '../../Config/error';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -13,7 +14,7 @@ const AccordionPanel = ({ data }) => {
     const [expandSalesDayView, setExpandSalesDayView] = useState(false);
     const [fetchData, setFetchData] = useState();
 
-    const fetchingData = data;
+    const fetchingData = data.teammates;
 
     // setFetchData(
     //     fetchingData.map((i) => (
@@ -54,8 +55,8 @@ const AccordionPanel = ({ data }) => {
                             <img src='profilepic.jpg' alt="pic" className="profilePic" />
                         </Col>
                         <Col md={8} className="tmContainer ml-2">
-                            <span>{i.name ? i.name : "error_nombre"} {i.last_name ? i.last_name : "error_last_name"}</span>
-                            <p>{i.rol ? i.rol : "error_rol"}</p>
+                            <span>{i.name && i.last_name ? i.name + ' ' + i.last_name : ERROR.ACCORDION.ACCORDION_DATA_GET_FAILS}</span>
+                            <p>{i.rol ? i.rol : ERROR.ACCORDION.ACCORDION_DATA_GET_FAILS}</p>
                         </Col>
                     </Row>
                 ))
