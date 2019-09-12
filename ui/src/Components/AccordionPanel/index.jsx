@@ -9,7 +9,7 @@ const AccordionPanel = ({ data }) => {
     const [expandTmView, setExpandTmView] = useState(false);
     const [expandSalesReportsView, setExpandSalesReportsView] = useState(false);
     const [expandSalesDayView, setExpandSalesDayView] = useState(false);
-    
+
     return (
         <Accordion>
             <Card>
