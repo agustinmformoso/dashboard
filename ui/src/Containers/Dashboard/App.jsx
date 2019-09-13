@@ -8,7 +8,8 @@ import Grid from '../../Components/Grid';
 import Charts from '../../Components/Charts';
 import AccordionPanel from '../../Components/AccordionPanel';
 import Header from '../../Components/Header';
-import data from '../../db/db.json';
+import data from '../../db/db.json'; 
+import photos from '../../db/photos.json';
 
 const App = () => {
 
@@ -96,7 +97,7 @@ const App = () => {
             <Header />
             <Row>
                 <Col md={3} className="panel" >
-                    <AccordionPanel data={data} />
+                    <AccordionPanel data={data} photos={photos} />
                 </Col>
 
                 <Col md={9}>
